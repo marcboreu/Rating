@@ -1,0 +1,33 @@
+.container {
+  text-align: center;
+}
+
+.container-stars {
+    height: auto;
+    padding: 50vh 0px;
+    display: inline-block;
+}
+.container-stars:not(:checked) > input {
+    display: none;
+}
+.container-stars:not(:checked) > label {
+    float: right;
+    width:1.5em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:35px;
+    color:#ccc;
+}
+
+.container-stars:not(:checked) > label:before {
+    font-family: "Font Awesome 5 Free"; content: "\f005"; font-weight: 900;
+
+}
+.container-stars > input:checked ~ label {
+    color: gold;    
+}
+.container-stars:not(:checked) > label:hover,
+.container-stars:not(:checked) > label:hover ~ label {
+    color: goldenrod;  
+}
